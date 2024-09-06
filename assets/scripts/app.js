@@ -38,7 +38,7 @@ function writeLog(ev,val,monsterHealth,playerHealth){
         case LOG_EVENT_PLAYER_ATTACK:
             logEntry.target = 'Monster';
             break;
-            
+
         case LOG_EVENT_PLAYER_STRONG_ATTACK:
             logEntry = {
                 event:ev,
@@ -79,45 +79,7 @@ function writeLog(ev,val,monsterHealth,playerHealth){
             break;
 
     }
-    // if(ev === LOG_EVENT_PLAYER_ATTACK){
-    //     logEntry.target ='Monster';
-   
-    // }else if(ev === LOG_EVENT_PLAYER_STRONG_ATTACK){
-    //     logEntry = {
-    //         event:ev,
-    //         value:val,
-    //         target:'Monster',
-    //         finalMonsterHealth:monsterHealth,
-    //         finalPlayerHealth:playerHealth
-    //     };
-       
-    // }else if(ev === LOG_EVENT_MONSTER_ATTACK){
-    //     logEntry = {
-    //         event:ev,
-    //         value:val,
-    //         target:'Monster',
-    //         finalMonsterHealth:monsterHealth,
-    //         finalPlayerHealth:playerHealth
-    //     };
-       
-    // }else if(ev === LOG_EVENT_PLAYER_HEAL){
-    //     logEntry = {
-    //         event:ev,
-    //         value:val,
-    //         target:'Monster',
-    //         finalMonsterHealth:monsterHealth,
-    //         finalPlayerHealth:playerHealth
-    //     };
-       
-    // }else if(ev === LOG_EVENT_GAME_OVER){
-    //     logEntry = {
-    //         event:ev,
-    //         value:val,
-    //         finalMonsterHealth:monsterHealth,
-    //         finalPlayerHealth:playerHealth
-    //     };
-       
-    // }
+
     battleLog.push(logEntry);
 
 }
