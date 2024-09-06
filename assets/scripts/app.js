@@ -16,6 +16,7 @@ const enteredValue = prompt('Maximum life for you and monster : ','100');
 
 
 let chosenMaxLife = parseInt(enteredValue);
+let battleLog = [];
 if(isNaN(enteredValue) || chosenMaxLife <=0){
     chosenMaxLife = 100;
 
@@ -133,10 +134,11 @@ function attackMonster(mode){
 
     }
 
-    writeLog(logEvent,damage,currentMonsterHealth,currentPlayerHealth);
 
     const damage = dealMonsterDamage(maxDamage);
     currentMonsterHealth -= damage;
+    writeLog(logEvent,damage,currentMonsterHealth,currentPlayerHealth);
+
     endRound();
 
 
